@@ -1,12 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 
-int[] numbers = { 1, 2, 3, 4, 5 };
-int max = numbers[0];
-foreach (var i in numbers)
+internal class Program
 {
-    if (i>max)
+    public static void Main(string[] args)
     {
-        max = i;
-    }   
+        int[] tab = { 2, 3, 4, 5 };
+        Console.WriteLine(max(tab));   
+    }
+    public static double max(int[] COLLECTION)
+    {
+        double x = 0;
+        foreach (var VARIABLE in COLLECTION)
+        {
+            x += VARIABLE;
+        }
+
+        return x / COLLECTION.Length;
+    }
 }
-Console.WriteLine(max);
